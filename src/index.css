@@ -6,6 +6,9 @@
 div {
   margin: 0 0;
   padding: 0 0;
+  word-wrap: break-word;
+  /* overflow-wrap: break-word; */
+  white-space: pre-wrap;
 }
 
 body

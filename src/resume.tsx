@@ -58,12 +58,14 @@ export const Resume: React.FC = () => {
                 <div className="w-full rounded-[6px] bg-[#333] py-[3px] pl-[26px] pr-[10px] text-[#fff]">
                   <p className="text-[18px]">个人经历</p>
                 </div>
-                <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[10px]">
+                <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[5px]">
                   <h3>湖南科技大学潇湘学院(本科)</h3>
                   <ul>
                     <li>专业: 计算机科学与技术</li>
                     <li>湖南科技大学ACM实验室</li>
                   </ul>
+                  <h3>MommyDaddyMe(2017-2020)</h3>
+                  <h3>虹川科技(2020-2021)</h3>
                   <h3>Vika 维格智数(2022-2023)</h3>
                   <ul>
                     <li>高级前端开发</li>
@@ -74,10 +76,10 @@ export const Resume: React.FC = () => {
                 <div className="w-full rounded-[6px] bg-[#333] py-[3px] pl-[26px] pr-[10px] text-[#fff]">
                   <p className="text-[18px]">优势</p>
                 </div>
-                <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[10px]">
+                <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[5px]">
                   {/* <h3>湖南科技大学潇湘学院(本科)</h3> */}
                   <ul>
-                    <li>ACM实验室出身,具有扎实的算法基础和问题分析能力</li>
+                    <li>ACM实验室出身具有扎实的算法基础和问题分析能力</li>
                     <li>
                       作为主要人员参与开发过
                       <strong>Star10K以上开源项目</strong>
@@ -87,7 +89,7 @@ export const Resume: React.FC = () => {
                       独立负责并成功交付多个复杂项目,拥有丰富的项目架构及高难度功能开发经验
                     </li>
                     <li>善于分析问题本质,独立提出有效的创新性解决方案</li>
-                    <li>良好的团队协作和沟通能力,能与跨职能团队高效配合</li>
+                    <li>良好的团队协作和沟通能力,能与团队高效配合</li>
                     <li>
                       对代码质量和用户体验有强烈的追求,具备较强的设计和优化意识
                     </li>
@@ -110,24 +112,29 @@ export const Resume: React.FC = () => {
                   {/* <p className="text-[18px]">前端</p> */}
                 </div>
                 <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[10px]">
-                  7年前端开发从业经历，熟悉各类前端开发技术栈,包括
-                  <strong>JavaScript</strong>/<strong>CSS3</strong>/小程序、
-                  <strong>React</strong>/<strong>Vue</strong>/
-                  <strong>Webpack</strong>/<strong>Vite</strong>/
+                  7年前端开发从业经历,熟悉 JS
+                  底层原理,熟悉浏览器底层原理,熟悉各类前端开发技术栈,包括但不限于
+                  <strong>JavaScript</strong>/<strong>HTML</strong>/
+                  <strong>CSS3</strong>/<strong>React</strong>/
+                  <strong>Webpack</strong> <strong>Vite</strong>/
                   <strong>typeScript</strong>等,
                   熟悉前端开发的最佳实践,能高效完成从需求分析到代码实现的全流程工作
                 </div>
                 <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[10px]">
-                  熟练掌握前端React开发框架,研究过其实现原理细节,掌握框架相关生态的各项技术
-                  <strong>(Redux,zustand,tailwindcss,react-konva)</strong>
-                  等。有项目实践经验。
+                  熟练掌握前端<strong>React</strong>
+                  开发框架,研究过其实现原理细节,掌握框架相关生态的各项技术
+                  <strong>Redux</strong>,<strong>zustand</strong>,
+                  <strong>tailwindcss</strong>,<strong>react-konva</strong>
+                  等。有丰富的项目实践经验。
                 </div>
                 <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[10px]">
                   熟悉浏览器原理以及<strong>Http</strong>
                   相关技术，在性能优化方面有实践经验。
                 </div>
                 <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[10px]">
-                  对前端工程模块化有一定理解，熟悉webpack、vite等打包工具及其日常开发配置，可以从0到1独立搭建项目，并优化构建流程。
+                  对前端工程模块化有一定理解，熟悉<strong>webpack</strong>、
+                  <strong>vite</strong>
+                  等打包工具及其日常开发配置，可以从0到1独立搭建项目，并优化构建流程。
                 </div>
                 <div className="ml-[22px] border-l-[4px] border-[#333] pl-[26px] pt-[10px]">
                   了解<strong>Node.js</strong>
@@ -174,23 +181,41 @@ export const Resume: React.FC = () => {
                   <ul>
                     <li>
                       1.
-                      开发与优化基础表格模块,提升表格编辑和展示的性能和用户体验
+                      开发与优化基础表格模块,提升表格编辑和展示的性能和用户体验：
+                    </li>
+                    <li className="pl-[18px]">
+                      将公司表格视图以及甘特视图由原先的Dom渲染改成canvas渲染,实现canvas表格的无限列表,开发表格基于canvas基础的Text,Image,Line,Rect,Tooltip,Icon组件,
+                      然后由此基础上构建的不同类型(单选,多选,评分,邮件,成员,时间)的单元格,实现表格的基础筛选,分组,冻结列以及单元格拖拽填充复制等其他高级功能。
                     </li>
                     <li>
-                      2. 开发甘特图视图模块,为用户提供更直观的项目管理功能
+                      2.
+                      实现单向关联功能,增强数据之间的关联和联动能力以及归档箱功能
                     </li>
-                    <li>3. 实现单向关联功能,增强数据之间的关联和联动能力</li>
+                    <li className="pl-[18px]">
+                      实现两张协同表格的单项关联的前端ui,以及单项关联的后台数据处理机制。将不常用的数据进行归档,减少前端数据计算压力,解决归档箱数据关联计算问题
+                    </li>
                     <li>
-                      4.
-                      开发嵌入维格表文档功能,方便用户将表格内容嵌入到其他文档中
+                      3.
+                      开发嵌入维格表文档功能,方便用户将表格内容嵌入到其他文档中。提升了产品的可适应性。
                     </li>
-                    <li>5. 开发地图小程序,支持在地图中展示和分析数据</li>
-                    <li>6. 持续修复各类 bug,确保产品的稳定运行</li>
+                    <li className="pl-[18px]">
+                      为维格表嵌入到飞书文档,Notion,腾讯文档等在线文档提供支持,使用iframe嵌入,修改权限以及人员管理模,多平台登录对接
+                    </li>
+                    <li>4. 开发地图小程序,支持在地图中展示和分析数据</li>
+                    <li className="pl-[18px]">
+                      以协同表格为基础,实现的一个地图插件,包括实时协同数据更新,根据经纬度生成标点,标点展示位置所对应的行的数据详情
+                    </li>
                   </ul>
                   <p className="font-bold ">项目成果:</p>
                   <ul>
-                    <li>1. 优化了整体产品的使用性能,提高了用户的使用体验</li>
-                    <li>2. 丰富了公司产品功能提高公司产品竞争力</li>
+                    <li>
+                      1.
+                      优化了整体产品的使用性能,表格加载速度提升了3倍,产品运行速度提升了50%
+                    </li>
+                    <li>
+                      2.
+                      开发了多项类似于任务关联,单项关联,数据回收站,表格嵌入等同类竞品没有的功能.丰富了公司产品功能提高公司产品竞争力
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -220,6 +245,7 @@ export const Resume: React.FC = () => {
                     </li>
                     <li>
                       2. 前端采用了<strong>Taro</strong>、<strong>React</strong>
+                      <strong>tailwindcss</strong>
                       生态搭配<strong>zustand</strong>状态管理
                     </li>
                     <li>
@@ -234,10 +260,16 @@ export const Resume: React.FC = () => {
                       1.
                       负责整个小程序的前后端架构的搭建,包括技术选型、基础设施部署等工作
                     </li>
+                    <li className="pl-[18px]">
+                      选择了跨平台框架Taro搭配react生态链,zustand状态管理,并且实践了tailwindcss在小程序中的应用
+                    </li>
                     <li>
                       2.
                       独立完成了整个小程序的前后端开发工作,包括业务逻辑实现、界面设计、API
                       接口开发等
+                    </li>
+                    <li className="pl-[18px]">
+                      高质量完成了来自字节ui设计的70+页面。自己手写了卡片切换,搜索栏动画等定制页面,后端采用nest.js+prsima+mysql的模式,快速开发了50+api
                     </li>
                   </ul>
                   <p className="font-bold ">项目成果:</p>
@@ -337,6 +369,9 @@ export const Resume: React.FC = () => {
                     <li>
                       1.
                       整个项目的技术选型,采用React,zustand状态管理,react-dnd实现拖拽功能。
+                    </li>
+                    <li className="pl-[18px]">
+                      自己调研了产品需求,设计整个技术架构产品功能。实现了多元素拖拽布局,数据切换,打印模版主要功能。底层数据结构能适配不同表格
                     </li>
                   </ul>
                   <p className="font-bold ">项目成果:</p>
