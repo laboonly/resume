@@ -14,7 +14,6 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "prettier.requireConfig": true,
-    "prettier.configPath": ".prettierrc.js",
     "editor.indentSize": "tabSize",
     "i18n-ally.localesPaths": [
       "public/locales"

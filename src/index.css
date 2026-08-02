@@ -2,97 +2,180 @@
 @tailwind components;
 @tailwind utilities;
 
-
-div {
-  margin: 0 0;
-  padding: 0 0;
-  word-wrap: break-word;
-  /* overflow-wrap: break-word; */
-  white-space: pre-wrap;
+:root {
+  font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  color: #1f2937;
+  background: #e5e7eb;
 }
-
-body
-{
-	padding: 0;
-	margin: 0;
-	font-size: 16px;
-	background-color: #e0e0e0;
-	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+* {
+  box-sizing: border-box;
 }
-
-.container
-{
-	width: 1030px;
-	margin-top: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
-	background-color: #fff;
-	box-shadow: 3px 3px 9px rgba(0,0,0,.2);
-	overflow: auto;
+body {
+  margin: 0;
 }
-
-h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-  unicode-bidi: isolate;
+.resume {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 12px auto;
+  padding: 18mm 17mm 15mm;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.16);
+  font-size: 14px;
+  line-height: 1.65;
 }
-
-strong {
-  color: teal;
-  font-weight: 700;
-  font-size: 18px;
+.resume-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 18px;
+  border-bottom: 3px solid #0f766e;
 }
-
-li {
-  margin-bottom: 5px;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  color: #111827;
+}
+.target-role {
+  margin-top: 6px;
   font-size: 16px;
-  line-height: 1.4;
+  font-weight: 600;
+  color: #0f766e;
 }
-
-h3 span
-{
-	font-size: 23px;
+.contact-list {
+  display: grid;
+  gap: 4px;
+  font-style: normal;
+  font-size: 13px;
 }
-
-.box
-{
-	width: 50%;
-	box-sizing: border-box;
-	float: left;
-  padding-right: 56px;
+.contact-list a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  color: #374151;
+  text-decoration: none;
 }
-
-.page {
-  page-break-after: always;
+.resume section {
+  margin-top: 18px;
 }
-
-@media	print {
-	body{
-		background-color: #fff;
-    margin: 0 0;
-    padding: 0 0;
-	}
-
-	.container{
-		box-shadow: none;
-    /* padding: 0 0;
-    margin: 0 0; */
-	}
-
-
-	.stitle
-	{
-		margin: 0 0 0 0px;
-		color: #fff;
-		background-color: #333;
-		padding: 3px 10px 3px 26px;
-		border-radius: 6px;
-		width: 390px;
-	}
+.section-title {
+  margin-bottom: 9px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cbd5e1;
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f766e;
+  letter-spacing: 0.5px;
+}
+.summary {
+  color: #374151;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+}
+.skills-grid b {
+  color: #374151;
+}
+.skill-tag {
+  display: inline-block;
+  margin: 0 4px 4px 0;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: #f0fdfa;
+  color: #115e59;
+  font-size: 12px;
+}
+.timeline {
+  display: grid;
+  gap: 8px;
+}
+.experience,
+.education-row,
+.project-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+h3 {
+  font-size: 15px;
+  color: #111827;
+}
+.experience p,
+.education-row p,
+.project-heading p {
+  color: #64748b;
+  font-size: 12px;
+}
+time,
+.project-heading > span {
+  flex: none;
+  color: #64748b;
+  font-size: 12px;
+}
+.project {
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+  break-inside: avoid;
+}
+.project-heading > span {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+}
+ul {
+  margin: 7px 0 0;
+  padding-left: 20px;
+}
+li {
+  margin: 4px 0;
+}
+strong {
+  color: #0f766e;
+}
+.education {
+  padding-bottom: 0;
+}
+@media (max-width: 760px) {
+  .resume {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 28px 22px;
+    box-shadow: none;
+  }
+  .resume-header,
+  .project-heading {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact-list a {
+    justify-content: flex-start;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  :root {
+    background: #fff;
+  }
+  .resume {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 12mm 14mm;
+    box-shadow: none;
+  }
 }
