@@ -40,10 +40,10 @@ export const Resume: React.FC = () => {
       <section>
         <SectionTitle>个人概述</SectionTitle>
         <p className="summary">
-          7 年前端开发经验，专注 React、Next.js
-          与复杂企业级应用。具备从需求拆解、技术选型、前端架构到交付上线的完整经验；参与
-          Star 10K+ 开源项目，擅长 AI 编程工具、CodeMirror 编辑器、Canvas
-          渲染、性能优化、协同表格与插件类产品开发。
+          7 年前端开发经验，聚焦 React、Next.js
+          与复杂企业级应用。具备从需求拆解、技术选型、架构设计到上线交付的完整经验；参与
+          Star 10K+ 开源项目，擅长 AI Coding、CodeMirror 编辑器、Canvas
+          渲染、性能优化及协同表格/插件类产品研发。
         </p>
       </section>
 
@@ -72,8 +72,8 @@ export const Resume: React.FC = () => {
             <SkillTag>Webpack</SkillTag>
             <SkillTag>CodeMirror</SkillTag>
             <SkillTag>Canvas</SkillTag>
-            <SkillTag>浏览器原理</SkillTag>
-            <SkillTag>HTTP</SkillTag>
+            <SkillTag>LSP / WebSocket</SkillTag>
+            <SkillTag>浏览器渲染与性能</SkillTag>
           </div>
           <div>
             <b>服务端与部署：</b>
@@ -130,24 +130,30 @@ export const Resume: React.FC = () => {
           </div>
           <ul>
             <li>
-              参与 AI 在线编程工具前端研发，负责 AI 聊天窗、代码编辑器和 AI
-              修改流程等核心交互模块。
-            </li>
-            <li>
-              设计并实现 AI
-              修改回退与快照持久化方案，将文件快照从浏览器侧迁移至服务端存储，支持跨浏览器恢复、单文件及批量修改的
-              revert / rollback。
+              负责 AI Coding 工作台核心前端研发，覆盖 AI
+              聊天、在线代码编辑器、任务通知与 AI
+              改码流程，支撑从自然语言指令到代码生成、审阅与修复的完整交互链路。
             </li>
             <li>
               基于 CodeMirror 对接 LSP 与 <strong>@codemirror/lint</strong>
-              ，实现多语言错误/警告展示、问题详情、悬浮提示及{' '}
-              <strong>Fix in Chat</strong>
-              ，并兼容代码跳转、自动补全和 AI 改码流程。
+              ，实现面向多语言的诊断展示、错误面板、悬浮提示、快捷键导航与{' '}
+              <strong>Fix in Chat</strong>，并兼容代码跳转、自动补全和 AI
+              改码流程。
             </li>
             <li>
-              改造 CodeMirror Minimap，聚合展示 AI Diff、搜索命中、光标及 Lint
-              状态，支持快速定位与 Diff 块切换；同时完成消息列表虚拟滚动和 Memo
-              优化，降低复杂会话下的页面卡顿。
+              研发 CodeMirror Minimap，聚合展示 AI Diff、搜索结果、选区、光标与
+              Lint 状态，支持 Diff
+              块快速定位；持续优化大文件跳转和复杂会话下的渲染性能。
+            </li>
+            <li>
+              参与 AI 修改“时间机器”能力建设，打通前端、Diff Toolbar 与 IDE
+              Server 的快照协议，实现新增、删除、修改文件的单文件/批量文件{' '}
+              <strong>revert</strong>、<strong>restore</strong>、
+              <strong>rollback</strong>，并支持服务端快照持久化。
+            </li>
+            <li>
+              补充 CodeMirror、Lint 与 Minimap
+              的单元测试和增量覆盖率检查，提升编辑器核心模块的稳定性与可维护性。
             </li>
           </ul>
         </article>
@@ -164,14 +170,14 @@ export const Resume: React.FC = () => {
             <li>
               主导表格视图与甘特视图从 DOM 渲染迁移至 Canvas，搭建
               Text、Image、Line、Rect、Tooltip、Icon
-              等基础组件及多类型单元格能力。
+              等基础组件及多类型单元格渲染能力。
             </li>
             <li>
-              实现无限列表、筛选、分组、冻结列、拖拽填充与复制等高频交互；推动复杂表格编辑与展示性能优化。
+              实现无限列表、筛选、分组、冻结列、拖拽填充与复制等高频交互，解决复杂数据量下表格编辑与展示的性能问题。
             </li>
             <li>
-              交付单向关联、归档箱、表格嵌入及地图插件等功能；支持飞书、Notion、腾讯文档等平台通过
-              iframe 嵌入和多平台登录接入。
+              交付单向关联、归档箱、表格嵌入及地图插件等关键能力；支持飞书、Notion、腾讯文档等平台的
+              iframe 嵌入、多平台登录与权限接入。
             </li>
             <li>
               <strong>成果：</strong>表格加载速度提升 3 倍，产品运行速度提升
@@ -190,16 +196,16 @@ export const Resume: React.FC = () => {
           </div>
           <ul>
             <li>
-              负责项目技术选型、前后端架构与基础设施部署，完成从需求到发布的全生命周期开发。
+              独立完成技术选型、前后端架构与基础设施部署，覆盖需求拆解、开发、自测与发布的完整交付流程。
             </li>
             <li>
               基于 Taro + React + Zustand
-              构建跨端小程序，完成职位、收藏、推荐、个人中心和流程审核等{' '}
+              构建跨端招聘小程序，完成职位、收藏、推荐、个人中心和流程审核等{' '}
               <strong>70+</strong> 页面。
             </li>
             <li>
-              使用 NestJS、Prisma 与 MySQL 设计并实现 <strong>50+</strong>{' '}
-              API，支撑个人和企业双角色招聘业务流程。
+              使用 NestJS、Prisma 与 MySQL 设计并实现 <strong>50+</strong> 个
+              API，支撑个人与企业双角色的招聘业务流程。
             </li>
           </ul>
         </article>
@@ -214,11 +220,11 @@ export const Resume: React.FC = () => {
           </div>
           <ul>
             <li>
-              独立完成轮播图插件，支持读取多维表格数据、图文配置、平滑轮播、预览刷新和配置持久化，并完成内测发布。
+              独立完成轮播图插件，从多维表格读取数据，支持图文配置、平滑轮播、预览刷新和配置持久化，并完成内测发布。
             </li>
             <li>
               设计并交付打印设计器，支持文本、图片、表格、PDF
-              等元素自由拖拽排版、模板保存与多数据源打印。
+              等元素的自由拖拽排版、模板保存与多数据源打印。
             </li>
             <li>
               <strong>成果：</strong>
